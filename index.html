@@ -13,7 +13,7 @@
             vr-mode-ui="enabled: false;"
             loading-screen="enabled: false;"
             renderer="logarithmicDepthBuffer: true;"
-            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;"
+            arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
             id="scene"
             embedded
             gesture-detector
@@ -37,7 +37,7 @@
             >
                 <a-entity
                     id="bowser-model"
-                    scale="0.16666666666666669 0.16666666666666669 0.16666666666666669"
+                    scale="0.3333333333333333 0.3333333333333333 0.3333333333333333"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
                     class="clickable"
@@ -47,21 +47,5 @@
 
             <a-entity camera></a-entity>
         </a-scene>
-
-
-        <script>
-            var video = document.querySelector("#video");
-            var canvas = document.querySelector("#canvas");
-        
-            navigator.mediaDevices.getUserMedia()
-              .then(function(res){
-                console.log(res)
-              })
-              .catch(function(err) {
-                console.log("Error al acceder a la cámara: " + err);
-              });
-        
-           
-          </script>
     </body>
 </html>
